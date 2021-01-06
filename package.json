@@ -2,7 +2,7 @@
   "name": "micro-front-end",
   "version": "0.0.0",
   "description": "Micro front end architectute",
-  "repository": "https://github.com/module-federation/module-federation-examples.git",
+  "repository": "https://github.com/MikeNats/micro-front-end.git",
   "author": "Michail Tsougkranis <michail.tsougkranis@gmail.com> (https://github.com/MikeNats)",
   "license": "MIT",
   "private": true,
