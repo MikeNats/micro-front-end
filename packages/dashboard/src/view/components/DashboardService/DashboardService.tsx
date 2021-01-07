@@ -1,17 +1,15 @@
 import { Container, Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
 import Widget from "../Widget";
-import { usePagetitle } from "@packages/store/entities/pageTitle/hooks";
 import useStyles from "./styles";
 const RecentOrders = React.lazy(() => import("order/RecentOrdersWidget"));
 const SalesDeposits = React.lazy(() => import("sales/DepositsWidget"));
 const SalesToday = React.lazy(() => import("sales/TodayWidget"));
 
-const Dashboard = () => {
+const Dashboard = ({ store }) => {
   const classes = useStyles();
-  const { dispatchPageTitle } = usePagetitle();
   useEffect(() => {
-    dispatchPageTitle("Dashboard");
+    store.dispatchPageTitle("Dashboard");
   }, []);
 
   return (

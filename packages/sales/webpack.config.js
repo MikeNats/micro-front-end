@@ -63,7 +63,6 @@ module.exports = {
             requiredVersion: deps["react-dom"],
           },
         },
-        "@packages/store",
       ],
     }),
     new HtmlWebpackPlugin({

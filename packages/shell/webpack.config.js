@@ -59,7 +59,7 @@ module.exports = {
         shell: "shell@http://localhost:3000/remoteEntry.js",
       },
       exposes: {
-        "./Shell": "./src/Shell",
+        "./Shell": "./src/view/Shell",
       },
       shared: [
         {

@@ -13,14 +13,12 @@ import React, { useEffect, useState } from "react";
 import { getOrders } from "../../../services";
 import useStyles from "./styles";
 import OrderRow from "../OrderRow";
-import { usePagetitle } from "@packages/store/entities/pageTitle/hooks";
 import { OrderType } from "../../../models";
-const OrderService: React.FC = () => {
+const OrderService = ({ store }) => {
   const classes = useStyles();
   const [orders, setOrders] = useState<OrderType[]>([]);
-  const { dispatchPageTitle } = usePagetitle();
   useEffect(() => {
-    dispatchPageTitle("Orders");
+    store.dispatchPageTitle("Orders");
     getOrders().then((data) => {
       setOrders(data);
     });

@@ -1,9 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useCallback } from "react";
-import { auth, authSuccess, authFail } from "./actions";
-import { authSelector } from "./selectors";
+import {
+  auth,
+  authSuccess,
+  authFail,
+} from "../../../store/entities/auth/actions";
+import { authSelector } from "../../../store/entities/auth/selectors";
+import { UseAuthType } from "./types";
 
-export const useAuth = (authService) => {
+import { useCallback } from "react";
+
+export const useAuth = (authService: Function): UseAuthType => {
   const dispatch = useDispatch();
   const dispatchAuth = useCallback(
     async (credentials) => {

@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setPageTitle } from "./actions";
-import { pageTitleSelector } from "./selectors";
-import { useCallback } from "react";
+import { setPageTitle } from "../../../store/entities/pageTitle/actions";
+import { pageTitleSelector } from "../../../store/entities/pageTitle/selectors";
+import { usePagetitleType } from "./types";
 
-export const usePagetitle = () => {
+import { useCallback } from "react";
+export const usePagetitle = (): usePagetitleType => {
   const dispatch = useDispatch();
   const dispatchPageTitle = useCallback(
     (title) => {

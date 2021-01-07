@@ -2,9 +2,9 @@ import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 import { CssBaseline } from "@material-ui/core";
-import { store } from "@packages/store";
-import App from "./view/App/App";
-import ErrorBoundary from "./view/ErrorBoundary";
+import { store } from "../store";
+import App from "./App/App";
+import ErrorBoundary from "./ErrorBoundary";
 const Shell: React.FC = () => (
   <React.StrictMode>
     <ErrorBoundary>
