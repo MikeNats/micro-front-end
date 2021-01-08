@@ -1,7 +1,7 @@
 {
   "name": "micro-front-end",
   "version": "0.0.0",
-  "description": "Micro front end architectute",
+  "description": "Micro front end architectute: Typescript, React, Redux, Hooks, Yarn Workspaces, Lerna, Fererated Modules, Materical UI, ",
   "repository": "https://github.com/MikeNats/micro-front-end.git",
   "author": "Michail Tsougkranis <michail.tsougkranis@gmail.com> (https://github.com/MikeNats)",
   "license": "MIT",
