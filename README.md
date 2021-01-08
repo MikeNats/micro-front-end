@@ -5,7 +5,7 @@ This is a React/Redux/Typescript monorepo ecosystem demo that follows the Micro 
 
 - Lerna: for managing the monorepo.
 - Federarted modules: for the orchestration of the shared components/micro-front-ends
-- Yarn Workspaces: dependency managment
+- Yarn Workspaces: dependency management
 
 ## Micro Front Ends
 
@@ -18,8 +18,8 @@ This is a React/Redux/Typescript monorepo ecosystem demo that follows the Micro 
 # Cross communication
 
 `shell` owns the Global appliction state.
-Global application state can be accesed/updated in APP `shell` throught `Global Hooks`.
-`Global Hooks` return coresponding redux state and a setter function - `dispatchMySeterFunction`
+Global application state can be accessed/updated in APP `shell` through `Global Hooks`.
+`Global Hooks` return corresponding redux state and a setter function - `dispatchMySeterFunction`
 
 ```
 export const useGlobalHookStateName = (): hookState => {
@@ -43,7 +43,7 @@ const [globalHookStateName, dispatchGlobalHookStateName] = useGlobalHookStateNam
 ```
 
 `Global Hooks` are combined into a Global Store Hook `useStore`.
-`useStore` expose Global Application State that is passed down to micro front ends as `props` throught the routes:
+`useStore` expose Global Application State that is passed down to micro front ends as `props` through the routes:
 
 ```
   const { auth, pageTitle } = useStore();
