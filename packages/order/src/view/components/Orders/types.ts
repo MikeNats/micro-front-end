@@ -1,5 +1,3 @@
 export type OrdersPopsType = {
-  store: {
-    dispatchPageTitle: (title: string) => void;
-  };
+  setTitle: (title: string) => void;
 };

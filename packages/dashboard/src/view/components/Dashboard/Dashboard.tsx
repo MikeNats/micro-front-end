@@ -7,10 +7,10 @@ const SalesToday = React.lazy(() => import("sales/TodayWidget"));
 const SalesDeposits = React.lazy(() => import("sales/DepositsWidget"));
 
 import { DashboardPopsType } from "./types";
-const Dashboard = ({ store }: DashboardPopsType) => {
+const Dashboard = ({ setTitle }: DashboardPopsType) => {
   const classes = useStyles();
   useEffect(() => {
-    store.dispatchPageTitle("Dashboard");
+    setTitle("Dashboard");
   }, []);
 
   return (

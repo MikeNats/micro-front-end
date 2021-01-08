@@ -16,7 +16,7 @@ import OrderRow from "../OrderRow";
 import { OrderType } from "../../../models";
 import { OrdersPopsType } from "./types";
 
-const Orders = ({ store }: OrdersPopsType) => {
+const Orders = ({ setTitle }: OrdersPopsType) => {
   const classes = useStyles();
   const [orders, setOrders] = useState<OrderType[]>([]);
   useEffect(() => {
@@ -25,7 +25,7 @@ const Orders = ({ store }: OrdersPopsType) => {
       setOrders(response);
     }
 
-    store.dispatchPageTitle("Orders");
+    setTitle("Orders");
     fetchOrders();
   }, []);
   return (

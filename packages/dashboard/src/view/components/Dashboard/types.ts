@@ -1,5 +1,3 @@
 export type DashboardPopsType = {
-  store: {
-    dispatchPageTitle: (title: string) => void;
-  };
+  setTitle: (title: string) => void;
 };

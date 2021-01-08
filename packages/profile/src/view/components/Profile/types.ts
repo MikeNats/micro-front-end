@@ -1,9 +1,7 @@
 export type ProfilePropsType = {
-  store: {
-    dispatchPageTitle: (pageTitle: string) => void;
-    link: string;
-    description: string;
-    displayName: string;
-    img: string;
-  };
+  setTitle: (pageTitle: string) => void;
+  link: string;
+  description: string;
+  fullName: string;
+  imgUrl: string;
 };

@@ -12,31 +12,21 @@ const Router: React.FC = () => {
       <Routes>
         <Route
           path="dashboard/*"
-          element={
-            <Dashboard
-              store={{ dispatchPageTitle: pageTitle.dispatchPageTitle }}
-            />
-          }
+          element={<Dashboard setTitle={pageTitle.dispatchPageTitle} />}
         />
         <Route
           path="orders/*"
-          element={
-            <Orders
-              store={{ dispatchPageTitle: pageTitle.dispatchPageTitle }}
-            />
-          }
+          element={<Orders setTitle={pageTitle.dispatchPageTitle} />}
         />
         <Route
           path="profile/*"
           element={
             <Profile
-              store={{
-                dispatchPageTitle: pageTitle.dispatchPageTitle,
-                link: auth.data.link,
-                description: auth.data.description,
-                displayName: auth.data.displayName,
-                img: auth.data.img,
-              }}
+              setTitle={pageTitle.dispatchPageTitle}
+              link={auth.data.link}
+              description={auth.data.description}
+              fullName={auth.data.displayName}
+              imgUrl={auth.data.img}
             />
           }
         />
