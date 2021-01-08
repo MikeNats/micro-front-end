@@ -3,7 +3,7 @@ import { Box, CircularProgress } from "@material-ui/core";
 import { BrowserRouter } from "react-router-dom";
 import AppDrawer from "../components/AppDrawer";
 import AppBar from "../components/AppBar/AppBar";
-import { useAuth } from "./hooks/auth";
+import { useAuth } from "../../globalHooks/auth";
 import Router from "../components/Router";
 const App: React.FC = () => {
   const [isDrawerOpened, setIsDrawerOpened] = useState<boolean>(false);

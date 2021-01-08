@@ -7,7 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
-import { usePagetitle } from "../../App/hooks/pageTitle";
+import { usePagetitle } from "../../../globalHooks/pageTitle";
 import useStyles from "./styles";
 import { DrawerHookType } from "../../App/types";
 const AppBar = ({ isDrawerOpened, toggleDrawer }: DrawerHookType) => {

@@ -1,4 +1,4 @@
-import { AuthType } from "../../../models";
+import { AuthType } from "../models";
 
 export type UseAuthType = {
   dispatchAuth: (title: any) => void;

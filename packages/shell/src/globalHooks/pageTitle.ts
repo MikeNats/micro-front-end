@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setPageTitle } from "../../../store/entities/pageTitle/actions";
-import { pageTitleSelector } from "../../../store/entities/pageTitle/selectors";
+import { setPageTitle } from "../store/entities/pageTitle/actions";
+import { pageTitleSelector } from "../store/entities/pageTitle/selectors";
 import { usePagetitleType } from "./types";
 
 import { useCallback } from "react";

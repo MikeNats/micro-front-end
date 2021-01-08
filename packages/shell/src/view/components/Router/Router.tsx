@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useStore } from "../../App/hooks/store";
+import { useStore } from "../../../globalHooks/store";
 const Dashboard = React.lazy(() => import("dashboard/Dashboard"));
 const Orders = React.lazy(() => import("order/Orders"));
 const Profile = React.lazy(() => import("profile/Profile"));
