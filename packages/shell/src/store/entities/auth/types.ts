@@ -8,8 +8,8 @@ export type AuthReducerType = {
 
 export enum ACTIONS {
   AUTH = "AUTH",
-  AUTH_SUCCESS = "AUTH_SUCCESS",
   AUTH_FAIL = "AUTH_FAIL",
+  AUTH_SUCCESS = "AUTH_SUCCESS",
 }
 
 export type ActionsType = {

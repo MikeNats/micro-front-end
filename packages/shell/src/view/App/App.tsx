@@ -9,9 +9,10 @@ const App: React.FC = () => {
   const [isDrawerOpened, setIsDrawerOpened] = useState<boolean>(false);
   const toggleDrawer = (): void =>
     setIsDrawerOpened((drawerStatus) => !drawerStatus);
+
   const { dispatchAuth, isLoading } = useAuth();
   useEffect(() => {
-    dispatchAuth({});
+    dispatchAuth({ userName: "mock", pass: "mock" }); //mock auth service
   }, []);
   return (
     <BrowserRouter>

@@ -15,8 +15,12 @@ export const useAuth = (): UseAuthType => {
     async (credentials) => {
       try {
         dispatch(auth());
-        const { displayName, email } = await authService(credentials);
-        dispatch(authSuccess({ displayName, email }));
+        const { displayName, description, link, img } = await authService(
+          credentials
+        );
+        dispatch(
+          authSuccess({ data: { displayName, description, link, img } })
+        );
       } catch (error) {
         dispatch(authFail({ error }));
       }

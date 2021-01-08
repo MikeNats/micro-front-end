@@ -1,4 +1,6 @@
 export type AuthType = {
   displayName: string;
-  email: string;
+  description: string;
+  img: string;
+  link: string;
 };

@@ -38,10 +38,10 @@
       "sales/DepositsWidget": [
         "packages/sales/src/view/components/DepositsWidget"
       ],
-
       "order/RecentOrdersWidget": [
         "packages/order/src/view/components/RecentOrdersWidget"
-      ]
+      ],
+      "profile/Profile": ["packages/profile/src/view/components/Profile"]
     }
   },
   "include": ["packages/**/*"]
