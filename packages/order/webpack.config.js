@@ -51,7 +51,7 @@ module.exports = {
       },
       exposes: {
         "./RecentOrdersWidget": "./src/view/components/RecentOrdersWidget",
-        "./OrderService": "./src/view/components/OrderService",
+        "./Orders": "./src/view/components/Orders",
       },
       shared: [
         {

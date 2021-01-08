@@ -3,10 +3,11 @@ import React, { useEffect } from "react";
 import Widget from "../Widget";
 import useStyles from "./styles";
 const RecentOrders = React.lazy(() => import("order/RecentOrdersWidget"));
-const SalesDeposits = React.lazy(() => import("sales/DepositsWidget"));
 const SalesToday = React.lazy(() => import("sales/TodayWidget"));
+const SalesDeposits = React.lazy(() => import("sales/DepositsWidget"));
 
-const Dashboard = ({ store }) => {
+import { DashboardPopsType } from "./types";
+const Dashboard = ({ store }: DashboardPopsType) => {
   const classes = useStyles();
   useEffect(() => {
     store.dispatchPageTitle("Dashboard");

@@ -73,8 +73,6 @@ module.exports = {
             requiredVersion: deps["react-dom"],
           },
         },
-        // Workaround explaination: https://www.youtube.com/watch?v=-LNcpralkjM&t=540
-        "@packages/store",
       ],
     }),
     new HtmlWebpackPlugin({

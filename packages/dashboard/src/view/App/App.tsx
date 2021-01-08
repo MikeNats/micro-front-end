@@ -1,32 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { makeStyles, CircularProgress, Typography } from "@material-ui/core";
+import { CircularProgress, Typography } from "@material-ui/core";
+import useStyles from "./styles";
 const Shell = React.lazy(() => import("shell/Shell"));
-
-function App() {
-  return (
-    <React.Suspense fallback={<LoadingShell />}>
-      <Shell />
-    </React.Suspense>
-  );
-}
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-  },
-  text: {
-    marginTop: theme.spacing(3),
-  },
-}));
+const App = () => (
+  <React.Suspense fallback={<LoadingShell />}>
+    <Shell />
+  </React.Suspense>
+);
 
 function LoadingShell() {
   const classes = useStyles();

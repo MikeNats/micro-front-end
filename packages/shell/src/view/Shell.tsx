@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { CssBaseline } from "@material-ui/core";
 import { store } from "../store";
 import App from "./App/App";
-import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundary from "./components/ErrorBoundary";
 const Shell: React.FC = () => (
   <React.StrictMode>
     <ErrorBoundary>

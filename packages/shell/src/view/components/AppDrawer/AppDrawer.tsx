@@ -4,10 +4,10 @@ import { ChevronLeft as ChevronLeftIcon } from "@material-ui/icons";
 import clsx from "clsx";
 import useStyles from "./styles";
 import Nav from "../Nav";
-import { DrawerHookType } from "../App/types";
-
+import { DrawerHookType } from "../../App/types";
 const AppDrawer = ({ isDrawerOpened, toggleDrawer }: DrawerHookType) => {
   const classes = useStyles();
+  const onClickHandler = (): void => toggleDrawer();
 
   return (
     <Drawer
@@ -21,11 +21,7 @@ const AppDrawer = ({ isDrawerOpened, toggleDrawer }: DrawerHookType) => {
       open={isDrawerOpened}
     >
       <div className={classes.toolbarIcon}>
-        <IconButton
-          onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void =>
-            toggleDrawer()
-          }
-        >
+        <IconButton onClick={onClickHandler}>
           <ChevronLeftIcon />
         </IconButton>
       </div>

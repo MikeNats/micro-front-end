@@ -1,5 +1,12 @@
 import { OrderType } from "../../models";
-const createData = (id, date, name, shipTo, paymentMethod, amount) => ({
+const createData = (
+  id: number,
+  date: string,
+  name: string,
+  shipTo: string,
+  paymentMethod: string,
+  amount: number
+) => ({
   id,
   date,
   name,

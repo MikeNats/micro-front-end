@@ -8,14 +8,18 @@ import {
   Label,
   ResponsiveContainer,
 } from "recharts";
-
+import { SalesType } from "../../../models";
 import { getSales } from "../../../services";
 
 const TodayWidget: React.FC = () => {
   const theme = useTheme();
-  const [sales, setSales] = useState([]);
+  const [sales, setSales] = useState<SalesType[]>([]);
   useEffect(() => {
-    getSales().then((sales) => setSales(sales));
+    async function fetchSales() {
+      const response: SalesType[] = await getSales();
+      setSales(response);
+    }
+    fetchSales();
   }, []);
   return (
     <Box display="flex" flexDirection="column" flex={1}>

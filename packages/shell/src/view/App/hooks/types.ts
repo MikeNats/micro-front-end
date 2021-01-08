@@ -1,13 +1,13 @@
 import { AuthType } from "../../../models";
 
 export type UseAuthType = {
-  dispatchAuth: Function;
+  dispatchAuth: (title: any) => void;
   data: AuthType;
   error: boolean | null;
   isLoading: boolean;
 };
 
 export type usePagetitleType = {
-  dispatchPageTitle: Function;
+  dispatchPageTitle: (title: any) => void;
   pageTitle: string;
 };

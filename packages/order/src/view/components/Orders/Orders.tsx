@@ -14,14 +14,19 @@ import { getOrders } from "../../../services";
 import useStyles from "./styles";
 import OrderRow from "../OrderRow";
 import { OrderType } from "../../../models";
-const OrderService = ({ store }) => {
+import { OrdersPopsType } from "./types";
+
+const Orders = ({ store }: OrdersPopsType) => {
   const classes = useStyles();
   const [orders, setOrders] = useState<OrderType[]>([]);
   useEffect(() => {
+    async function fetchOrders() {
+      const response = await getOrders();
+      setOrders(response);
+    }
+
     store.dispatchPageTitle("Orders");
-    getOrders().then((data) => {
-      setOrders(data);
-    });
+    fetchOrders();
   }, []);
   return (
     <main className={classes.content}>
@@ -60,4 +65,4 @@ const OrderService = ({ store }) => {
   );
 };
 
-export default OrderService;
+export default Orders;

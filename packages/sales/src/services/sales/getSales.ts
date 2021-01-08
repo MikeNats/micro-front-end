@@ -1,7 +1,7 @@
 import { SalesType } from "../../models";
 const createSale = (time, amount) => ({ time, amount });
 
-export default (): Promise<SalesType[]> =>
+export default async (): Promise<SalesType[]> =>
   new Promise((resolve) =>
     resolve([
       createSale("00:00", 0),

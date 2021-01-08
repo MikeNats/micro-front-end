@@ -7,12 +7,13 @@ import {
   Typography,
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
-import { usePagetitle } from "../App/hooks/pageTitle";
+import { usePagetitle } from "../../App/hooks/pageTitle";
 import useStyles from "./styles";
-import { DrawerHookType } from "../App/types";
+import { DrawerHookType } from "../../App/types";
 const AppBar = ({ isDrawerOpened, toggleDrawer }: DrawerHookType) => {
   const classes = useStyles();
   const { pageTitle } = usePagetitle();
+  const onClickHandler = (): void => toggleDrawer();
   return (
     <MuiAppBar
       position="absolute"
@@ -23,9 +24,7 @@ const AppBar = ({ isDrawerOpened, toggleDrawer }: DrawerHookType) => {
           edge="start"
           color="inherit"
           aria-label="open drawer"
-          onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void =>
-            toggleDrawer()
-          }
+          onClick={onClickHandler}
           className={clsx(
             classes.menuButton,
             isDrawerOpened && classes.menuButtonHidden

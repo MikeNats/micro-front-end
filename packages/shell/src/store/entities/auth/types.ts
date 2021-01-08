@@ -1,7 +1,7 @@
 import { AuthType } from "../../../models";
 
 export type AuthReducerType = {
-  data: AuthType | {};
+  data: AuthType;
   error: boolean | null;
   isLoading: boolean;
 };

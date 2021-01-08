@@ -54,7 +54,7 @@ module.exports = {
         dashboard: "dashboard@http://localhost:3001/remoteEntry.js",
       },
       exposes: {
-        "./DashboardService": "./src/view/components/DashboardService",
+        "./Dashboard": "./src/view/components/Dashboard",
       },
       shared: [
         {

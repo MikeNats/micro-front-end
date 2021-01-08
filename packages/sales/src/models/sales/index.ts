@@ -3,4 +3,4 @@ type SalesType = {
   amount: number | undefined;
 };
 
-export { SalesType };
+export type { SalesType };

@@ -1,2 +1,2 @@
 import { OrderType } from "./orders";
-export { OrderType };
+export type { OrderType };

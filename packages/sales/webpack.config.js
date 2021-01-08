@@ -45,11 +45,14 @@ module.exports = {
       name: "sales",
       filename: "remoteEntry.js",
       remotes: {
+        order: "order@http://localhost:3002/remoteEntry.js",
+        sales: "sales@http://localhost:3003/remoteEntry.js",
         shell: "shell@http://localhost:3000/remoteEntry.js",
+        dashboard: "dashboard@http://localhost:3001/remoteEntry.js",
       },
       exposes: {
-        "./TodayWidget": "./src/view/components/TodayWidget",
         "./DepositsWidget": "./src/view/components/DepositsWidget",
+        "./TodayWidget": "./src/view/components/TodayWidget",
       },
       shared: [
         {
