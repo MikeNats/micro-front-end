@@ -19,26 +19,26 @@ This is a React/Redux/Typescript monorepo ecosystem demo that follows the Micro 
 
 `shell` owns the Global appliction state.
 Global application state can be accessed/updated in APP `shell` through `Global Hooks`.
-`Global Hooks` return corresponding redux state and a setter function - `dispatchMySeterFunction`
+`Global Hooks` return corresponding redux state and a setter function - `dispatchMySetterFunction`
 
 ```
-export const useGlobalHookStateName = (): hookState => {
+export const useHookStateName = (): hookState => {
   const dispatch = useDispatch();
-  const dispatchGlobalHookStateName = useCallback(
-    (..) => {
-      dispatch(setPageTitle(...));
+  const dispatcHookStateName = useCallback(
+    (...) => {
+      dispatch(actionsName(...));
     },
     [dispatch]
   );
-  const { globalHookStateName } = useSelector(stateSelector);
+  const { reduxState } = useSelector(reduxSelector);
 
   return {
-    dispatchGlobalHookStateName,
-    globalHookStateName
+    dispatchlHookStateName,
+    reduxState
   };
 };
 
-const [globalHookStateName, dispatchGlobalHookStateName] = useGlobalHookStateName()
+const [reduxState, dispatchlHookStateName] = useHookStateName()
 
 ```
 
@@ -57,19 +57,25 @@ export const useStore = () => {
   };
 };
 ```
-`useStore` expose Global Application State that is passed down to micro front ends as `props` through the routes:
+`useStore` expose Global Application State that is passed down to micro front ends.
+
+You can pass it having a contract between all MFEs `prop` through the routes:
 
 ```
   const { auth, pageTitle } = useStore();
   ...
   return (
     <Route
-        path="dashboard/*"
-        element={
-        <Dashboard
-            store={{ dispatchPageTitle: pageTitle.dispatchPageTitle }}
+      path="profile/*"
+      element={
+        <Profile
+          setTitle={pageTitle.dispatchPageTitle}
+          link={auth.data.link}
+          description={auth.data.description}
+          fullName={auth.data.displayName}
+          imgUrl={auth.data.img}
         />
-        }
+      }
     />
    ...
 ```
