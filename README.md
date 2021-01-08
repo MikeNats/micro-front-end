@@ -1,12 +1,13 @@
 # Micro Front End Architecture
+This is a React/Redux/Typescript monorepo ecosystem demo that follows the Micro Front End Architecture by utilising Federeated Modules.
 
-## Technology Stack:
+## Repo Stack
 
 - Lerna: for managing the monorepo.
 - Federarted modules: for the orchestration of the shared components/micro-front-ends
 - Yarn Workspaces: dependency managment
 
-## Micro Front Ends:
+## Micro Front Ends
 
 - `shell` is the App Shell
 - `dashboard` - standalone application
