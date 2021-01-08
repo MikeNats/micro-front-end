@@ -43,6 +43,20 @@ const [globalHookStateName, dispatchGlobalHookStateName] = useGlobalHookStateNam
 ```
 
 `Global Hooks` are combined into a Global Store Hook `useStore`.
+```
+import { useAuth } from "./authHook";
+import { usePagetitle } from "./pageTitleHook";
+
+export const useStore = () => {
+  const { dispatchAuth, data, error, isLoading } = useAuth();
+  const { dispatchPageTitle, pageTitle } = usePagetitle();
+
+  return {
+    auth: { dispatchAuth, data, error, isLoading },
+    pageTitle: { dispatchPageTitle, pageTitle },
+  };
+};
+```
 `useStore` expose Global Application State that is passed down to micro front ends as `props` through the routes:
 
 ```
