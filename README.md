@@ -8,6 +8,7 @@ This is a React/Redux/Typescript monorepo ecosystem demo that follows the Micro 
 - Yarn Workspaces: dependency management
 
 ## Micro Front Ends
+Maretrial ui dashboard theme was used for the bellow MFEs:
 
 - `shell` is the App Shell
 - `dashboard` - standalone application
